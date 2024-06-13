@@ -1,0 +1,51 @@
+---
+########################################################################
+# How to create a YAML issue template form in your repository          #
+########################################################################
+# To use a YAML issue form in your repository, you must create a new
+# file and add it to the .github/ISSUE_TEMPLATE folder in your
+# repository by typing the full path to the new file in when prompted
+# for a new file's name.
+#
+# If, for example, you wanted to create the bug.yaml form to add to your
+# repository, click on the <> Code tab, then click on the "Add file"
+# button, click on "Create new file", and then type this into the window
+# that pops up: .github/ISSUE_TEMPLATE/bug.yaml
+#
+# Note that you won't need to get rid of your Markdown issue template.
+########################################################################
+# Required top-level fields                                            #
+########################################################################
+# The name is a string that's unique across all templates:
+name: Foo
+# The description is a string that is no more than 200 characters long
+# that describes the intended use for this template:
+description: Bar
+########################################################################
+# Optional top-level fields                                            #
+########################################################################
+# The title is an optional string that will pre-populate the title field
+# in the issue submission form. If you leave it blank, the title field
+# will be empty and will need to be filled in by the user. If you
+# populate it with a string value, it will contain that value with a
+# blinking cursor indicating to the user that he or she can change it.
+title: Baz
+# The labels are an array or comma-delimited string of labels that will
+# automatically be assigned to this issue:
+labels: new
+# The assignees are an array or comma-delimited string of users the
+# issue will be automatically assigned to:
+assignees:
+- Dave
+- Jane
+# The body is an array that defines user inputs:
+body:
+    - type: textarea
+    id: textarea_rendered_with_yaml
+    attributes:
+      label: Example YAML snippet
+      description: |
+        Please provide some example YAML:
+      render: yaml
+    validations:
+      required: false
