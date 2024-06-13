@@ -53,18 +53,18 @@ body:
   # SOME EXAMPLES:
 
   # CHECKBOX:
-  # - type: checkboxes
-  #   id: checkboxes
-  #   attributes:
-  #     label: What kinds of M&Ms do you like?
-  #     description: You may select more than one.
-  #     options:
-  #       - label: Green
-  #       - label: Orange
-  #       - label: Red
-  #       - label: Yellow
-  #   validations:
-  #     required: false
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: What kinds of M&Ms do you like?
+      description: You may select more than one.
+      options:
+        - label: Green
+        - label: Orange
+        - label: Red
+        - label: Yellow
+    validations:
+      required: false
 
   # CHECKBOX WITH REQUIRED ITEM:
   - type: checkboxes
@@ -182,6 +182,7 @@ body:
         | Column 1 cell  | Column 2 cell  |
         | Column 1 cell  | Column 2 cell  |
         | Column 1 cell  | Column 2 cell  |
+
         | Left-aligned | Center-aligned | Right-aligned |
         | :---         |     :---:      |          ---: |
         | one | two | three |
@@ -372,6 +373,7 @@ body:
     Strip example.
     Remove the final linebreak.
     Remove trailing blank lines.
+
   # The | indicator respects the placement of the text as is.
   #
   # | "clip": keep the final linebreak, remove trailing blank lines.
@@ -394,6 +396,8 @@ body:
     Strip example.
     Remove the final linebreak.
     Remove trailing blank lines.
+
+
   # TEXTAREA WITH A MULTI-LINE VALUE THAT CONTAINS A LINEBREAK:
   - type: textarea
     id: textarea_with_multi-line_value_with_linebreak
